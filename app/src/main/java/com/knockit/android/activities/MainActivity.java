@@ -22,9 +22,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.knockit.android.App;
 import com.knockit.android.fragments.MainFragment;
 import com.knockit.android.fragments.SettingsFragment;
 import com.knockit.android.R;
+import com.knockit.android.net.KnockitMessage;
 import com.knockit.android.utils.LocalPreferences;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -34,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private final MainFragment MainFragment = new MainFragment();
 
     private final SettingsFragment settingsFragment = new SettingsFragment();
+
+    private boolean firstLoad = true;
 
     private enum FragmentType {
         Main,
@@ -86,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onResume() {
         Log.d(TAG, "onResume()");
+        App.activityResumed();
         super.onResume();
 
     }
@@ -93,6 +98,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onPause() {
         Log.d(TAG, "onPause()");
+        App.activityPaused();
         super.onPause();
     }
 
@@ -302,5 +308,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
      */
     public LocalPreferences getLocalPreferences() {
         return localPreferences;
+    }
+
+    public void showFullScreenAlert(KnockitMessage knockitMessage) {
+        if (!firstLoad) {
+            if (knockitMessage != null) {
+                if (knockitMessage.getMessageType() == KnockitMessage.MESSAGE_TYPE_KNOKING) {
+                    this.showSnack("GO TO DOOR", Snackbar.LENGTH_SHORT, "EXIT");
+                }
+
+                if (knockitMessage.getMessageType() == KnockitMessage.MESSAGE_TYPE_LOW_BATTERY) {
+                    this.showSnack("LOW BATTERY", Snackbar.LENGTH_SHORT, "EXIT");
+                }
+            }
+        }
+
+        firstLoad = false;
     }
 }

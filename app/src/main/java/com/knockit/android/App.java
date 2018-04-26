@@ -15,4 +15,17 @@ public class App extends Application {
         // This line needed for the ImageViewer we use in the QwantImagesAdapter
         Fresco.initialize(this);
     }
+    public static boolean isActivityVisible() {
+        return activityVisible;
+    }
+
+    public static void activityResumed() {
+        activityVisible = true;
+    }
+
+    public static void activityPaused() {
+        activityVisible = false;
+    }
+
+    private static boolean activityVisible;
 }

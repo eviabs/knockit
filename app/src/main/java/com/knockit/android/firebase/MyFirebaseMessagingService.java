@@ -11,11 +11,13 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.support.v4.app.NotificationCompat;
+import android.util.Log;
 
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 import com.google.gson.JsonIOException;
+import com.knockit.android.App;
 import com.knockit.android.R;
 import com.knockit.android.activities.MainActivity;
 import com.knockit.android.net.KnockitMessage;
@@ -32,11 +34,15 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
+        Log.i("PVL", "State: " + App.isActivityVisible());
+
         KnockitMessage knockitMessage = KnockitMessage.getMessage(remoteMessageToJSON(remoteMessage));
         knockitMessage.setTime(remoteMessage.getSentTime());
-
-        sendNotification(knockitMessage);
         FirebaseHelper.addOutsideOfApp(FirebaseDatabase.getInstance().getReference(), knockitMessage);
+
+        if (!App.isActivityVisible()) {
+            sendNotification(knockitMessage);
+        }
     }
 
     private String remoteMessageToJSON(RemoteMessage remoteMessage) {

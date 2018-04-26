@@ -84,9 +84,13 @@ public class MainFragment extends Fragment implements RecyclerItemTouchHelper.Re
 
     public void updateList(ArrayList<KnockitMessage> knockitMessages) {
 
+        if (getActivity() == null) {
+            return;
+        }
+
+
         layoutLoading.setVisibility(View.GONE);
         Collections.sort(knockitMessages);
-//        messages = knockitMessages;
         adapter = new KnockitAdapter(knockitMessages, this);
 
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
@@ -97,6 +101,8 @@ public class MainFragment extends Fragment implements RecyclerItemTouchHelper.Re
 
         ItemTouchHelper.SimpleCallback itemTouchHelperCallback = new RecyclerItemTouchHelper(0, ItemTouchHelper.LEFT, this);
         new ItemTouchHelper(itemTouchHelperCallback).attachToRecyclerView(recyclerViewMessages);
+
+        ((MainActivity) getActivity()).showFullScreenAlert(knockitMessages.get(0));
 
     }
 
