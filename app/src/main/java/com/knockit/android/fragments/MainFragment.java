@@ -121,7 +121,7 @@ public class MainFragment extends Fragment implements RecyclerItemTouchHelper.Re
             coordinatorLayout = getActivity().findViewById(R.id.coordinator_layout);
             // showing snack bar with Undo option
             Snackbar snackbar = Snackbar
-                    .make(coordinatorLayout,"Notification removed", Snackbar.LENGTH_LONG);
+                    .make(coordinatorLayout,"Event deleted", Snackbar.LENGTH_LONG);
             snackbar.setAction("UNDO", new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
