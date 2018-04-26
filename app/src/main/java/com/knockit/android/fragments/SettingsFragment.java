@@ -44,19 +44,7 @@ public class SettingsFragment extends PreferenceFragmentCompatDividers {
                 e.printStackTrace();
             }
 
-            // Make sure that ONLY legal urls are committed.
-            // Bad URLs will raise an exception in Retrofit.
-            customServer.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-                                                           @Override
-                                                           public boolean onPreferenceChange(Preference preference, Object newValue) {
-                                                               if (!LocalPreferences.isValidURL((String)newValue)) {
-                                                                   ((MainActivity)getActivity()).showToast(getString(R.string.settings_bad_url));
-                                                                   return false;
-                                                               }
 
-                                                               return true;
-                                                           }
-                                                       });
 
             setDividerPreferences(DIVIDER_PADDING_CHILD | DIVIDER_CATEGORY_AFTER_LAST | DIVIDER_CATEGORY_BETWEEN);
 

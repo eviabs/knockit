@@ -1,7 +1,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory
-        android:title="@string/settings_search_settings">
+        android:title="Notifications">
 
         <ListPreference
             android:defaultValue="1"
@@ -9,8 +9,8 @@
             android:entries="@array/entryvalues_list_preference_numbers"
             android:entryValues="@array/entryvalues_list_preference_numbers"
             android:key="num_of_images"
-            android:summary="@string/settings_images_number"
-            android:title="@string/settings_images" />
+            android:summary="Duration of vibration during door knock"
+            android:title="Vibration" />
 
         <ListPreference
             android:defaultValue="1"
@@ -18,33 +18,20 @@
             android:entries="@array/entryvalues_list_preference_numbers"
             android:entryValues="@array/entryvalues_list_preference_numbers"
             android:key="num_of_suggestions"
-            android:summary="@string/settings_suggestions_number"
-            android:title="@string/settings_images_suggestions" />
+            android:summary="Sound to play during door knock"
+            android:title="Sound" />
 
         <SwitchPreference
             android:defaultValue="false"
             android:key="custom_server"
-            android:title="@string/settings_local_server" />
+            android:summary="Flash LED light during door knock"
+            android:title="Flash" />
 
-        <EditTextPreference
-            android:defaultValue="http://10.0.0.5"
-            android:dependency="custom_server"
-            android:dialogTitle="Type a URL"
-            android:key="custom_server_url"
-            android:summary="@string/settings_local_server_url"
-            android:title="@string/settings_local_server_title" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="category_custom_search_providers"
-        android:title="@string/settings_search_providers">
-
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="custom_search_providers"
-            android:title="@string/settings_search_providers_title" />
-
+        <Preference
+            android:key="clear_history"
+            android:title="Clear history">
+            android:summary="Clear door knock history">
+        </Preference>
 
     </PreferenceCategory>
 

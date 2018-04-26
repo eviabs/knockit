@@ -60,7 +60,7 @@
     <string name="settings_search_providers_urban_dictionary">Urban Dictionary</string>
     <string name="settings_about">About</string>
     <string name="settings_about_view_source_code">View source code</string>
-    <string name="settings_about_site">https://github.com/eviabs/Dicts</string>
+    <string name="settings_about_site">https://github.com/eviabs/knockit</string>
 
     <!--Alerts-->
     <string name="no_internet_connection">No internet</string>

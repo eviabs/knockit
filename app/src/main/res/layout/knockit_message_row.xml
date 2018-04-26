@@ -32,7 +32,7 @@
         android:id="@+id/view_foreground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorYellow"
+        android:background="@color/colorOrange"
         android:orientation="horizontal"
         android:padding="0dp">
 

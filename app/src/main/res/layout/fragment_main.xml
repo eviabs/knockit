@@ -7,12 +7,41 @@
     android:layout_height="match_parent"
     tools:context="com.knockit.android.activities.MainActivity">
 
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.knockit.android.activities.MainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@mipmap/wood_bg"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorYellow"
+        >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_regular"
+                android:textColor="@color/colorWhite"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="10dp"
+                android:text="HISTORY"
+
+                />
+    </LinearLayout>
         <LinearLayout
             android:id="@+id/layout_loading"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_gravity="center"
+            android:paddingTop="100dp"
             >
 
             <ProgressBar
@@ -25,15 +54,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Loading..."
+                android:textColor="@color/colorWhite"
                 android:layout_gravity="center"
                 />
 
         </LinearLayout>
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_view_messages"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="vertical" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_messages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        app:layout_anchor="@+id/layout_loading"
+        />
 
+</LinearLayout>
 </android.support.design.widget.CoordinatorLayout>
