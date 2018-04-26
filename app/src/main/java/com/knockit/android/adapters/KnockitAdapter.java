@@ -26,15 +26,13 @@ public class KnockitAdapter extends RecyclerView.Adapter<KnockitAdapter.MyViewHo
     private MainFragment activity;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView type, time;
+        public TextView message;
         public ImageView image;
         public RelativeLayout viewBackground, viewForeground;
 
         public MyViewHolder(View view) {
             super(view);
-            type = (TextView) view.findViewById(R.id.textViewMessageType);
-            time = (TextView) view.findViewById(R.id.textViewMessageTime);
-            image = (ImageView) view.findViewById(R.id.imageViewMessageImage);
+            message = (TextView) view.findViewById(R.id.textViewMessage);
 
             viewBackground = view.findViewById(R.id.view_background);
             viewForeground = view.findViewById(R.id.view_foreground);
@@ -58,14 +56,13 @@ public class KnockitAdapter extends RecyclerView.Adapter<KnockitAdapter.MyViewHo
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         KnockitMessage knockitMessage = knockitMessageList.get(position);
-        holder.type.setText("Type: " + knockitMessage.getMessageType());
+
 
         Date date = new Date(knockitMessage.getTime());
-        DateFormat formatter = new SimpleDateFormat("HH:mm:ss");
+        DateFormat formatter = new SimpleDateFormat("d/MM, HH:mm");
         String dateFormatted = formatter.format(date);
-        holder.time.setText("  Time: " + dateFormatted);
 
-        //holder.image.setImageDrawable();
+        holder.message.setText(dateFormatted);
     }
 
     @Override

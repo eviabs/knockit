@@ -20,6 +20,8 @@
     <!--Main Colors-->
     <color name="colorWhite">#ffffff</color>
     <color name="colorBlack">#000000</color>
+    <color name="colorRed">#A02020</color>
+    <color name="colorYellow">#e88f00</color>
     <color name="colorTransparent">#00000000</color>
     <color name="colorGrey">#dcdcde</color>
     <color name="colorMorfixTitleBackground">#10f696fd</color>

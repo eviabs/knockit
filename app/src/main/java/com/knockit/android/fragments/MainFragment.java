@@ -96,7 +96,7 @@ public class MainFragment extends Fragment implements RecyclerItemTouchHelper.Re
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
         recyclerViewMessages.setLayoutManager(mLayoutManager);
         recyclerViewMessages.setItemAnimator(new DefaultItemAnimator());
-        recyclerViewMessages.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL));
+//        recyclerViewMessages.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL));
         recyclerViewMessages.setAdapter(adapter);
 
         ItemTouchHelper.SimpleCallback itemTouchHelperCallback = new RecyclerItemTouchHelper(0, ItemTouchHelper.LEFT, this);

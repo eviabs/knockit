@@ -3,6 +3,7 @@ package com.knockit.android.activities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,13 +14,20 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.knockit.android.App;
@@ -83,9 +91,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setupFragments();
         showFragment(FragmentType.Main);
 
+        actionBarTitleGravity();
+
 //        Log.d(TAG, "exits onCreate");
     }
 
+    private void actionBarTitleGravity() {
+        // TODO: do this
+    }
     @Override
     protected void onResume() {
         Log.d(TAG, "onResume()");
@@ -142,9 +155,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-
-        MenuItem item = menu.findItem(R.id.action_search);
+//        getMenuInflater().inflate(R.menu.menu_main, menu);
+//
+//        MenuItem item = menu.findItem(R.id.action_search);
 
         return true;
     }
@@ -285,8 +298,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void showFullScreenAlert(KnockitMessage knockitMessage) {
         if (knockitMessage != null) {
             if (knockitMessage.getMessageType() == KnockitMessage.MESSAGE_TYPE_KNOKING) {
-                this.showSnack("GO TO DOOR", Snackbar.LENGTH_SHORT, "EXIT");
-            }
+                Intent myIntent = new Intent(MainActivity.this, NotificationActivity.class);
+                myIntent.putExtra("key", 4); //Optional parameters
+                MainActivity.this.startActivity(myIntent);            }
 
             if (knockitMessage.getMessageType() == KnockitMessage.MESSAGE_TYPE_LOW_BATTERY) {
                 this.showSnack("LOW BATTERY", Snackbar.LENGTH_SHORT, "EXIT");
