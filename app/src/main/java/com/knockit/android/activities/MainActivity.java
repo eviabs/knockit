@@ -93,12 +93,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         actionBarTitleGravity();
 
+        Intent myIntent = new Intent(MainActivity.this, SplashActivity.class);
+        myIntent.putExtra("key", 4); //Optional parameters
+        MainActivity.this.startActivity(myIntent);
+
 //        Log.d(TAG, "exits onCreate");
     }
 
     private void actionBarTitleGravity() {
         // TODO: do this
     }
+
     @Override
     protected void onResume() {
         Log.d(TAG, "onResume()");
@@ -300,7 +305,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             if (knockitMessage.getMessageType() == KnockitMessage.MESSAGE_TYPE_KNOKING) {
                 Intent myIntent = new Intent(MainActivity.this, NotificationActivity.class);
                 myIntent.putExtra("key", 4); //Optional parameters
-                MainActivity.this.startActivity(myIntent);            }
+                MainActivity.this.startActivity(myIntent);
+            }
 
             if (knockitMessage.getMessageType() == KnockitMessage.MESSAGE_TYPE_LOW_BATTERY) {
                 this.showSnack("LOW BATTERY", Snackbar.LENGTH_SHORT, "EXIT");
