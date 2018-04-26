@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "229004750127",
+    "firebase_url": "https://knokit-demo.firebaseio.com",
+    "project_id": "knokit-demo",
+    "storage_bucket": "knokit-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:229004750127:android:eddb0e06b20ea3e5",
+        "android_client_info": {
+          "package_name": "com.knockit.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "229004750127-a45ugthur5c7ug7f8iulf758usfvbkj4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.knockit.android",
+            "certificate_hash": "f2058a9aecda38f70968cc0e6c0bbb046f213fe5"
+          }
+        },
+        {
+          "client_id": "229004750127-9b273cl6ieoai7bv3odt1sthb3av6m4m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMghFl6DaowcSVXq8q3nUp_GeGP6PkwpE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "229004750127-9b273cl6ieoai7bv3odt1sthb3av6m4m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

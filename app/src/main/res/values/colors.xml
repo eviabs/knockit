@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e88f00</color>
+    <color name="colorPrimaryDark">#e88f00</color>
+    <color name="colorAccent">#5ac4be</color>
+    <color name ="colorAppBackground">#fbfbfb</color>
+
+    <!--===========================-->
+    <!--Dictionaries Colors-->
+    <!--===========================-->
+    <!--Urban-->
+    <color name ="colorUrbanTitle">#134FE6</color>
+
+    <!--Morfix-->
+    <color name="colorMorfixTitle">#ff6f6f6f</color>
+    <color name="colorMorfixTitleDivider">#ffa3a3a3</color>
+
+
+
+    <!--Main Colors-->
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorGrey">#dcdcde</color>
+    <color name="colorMorfixTitleBackground">#10f696fd</color>
+
+</resources>

@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">knockit</string>
+    <string name="action_refresh">Refresh</string>
+
+
+    <string name="menu_home">Home</string>
+    <string name="menu_tools">Settings</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="menu_title_communicate">Share</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="share_via">Share via:</string>
+    <string name="share_app_subject">Dicts</string>
+    <string name="share_app_body">You have to see this!</string>
+
+    Mainarch Bar-->
+    <string name="search_title">Search</string>
+    <string name="search_hint">Search Terms</string>
+
+    <!--Images search warning-->
+    <string name="images_warning_search">Images</string>
+    <string name="images_warning_no_images">No images found</string>
+    <string name="images_warning_loading_error">Could not load image</string>
+    <string name="images_warning_searching">Searching...</string>
+
+    <!--Dictionaries search warning-->
+    <string name="dictionaries_warning_search">Ready to search</string>
+    <string name="images_warning_loading">Loading...</string>
+    <string name="images_warning_server_error">Oops... Something went wrong</string>
+    <string name="dictionaries_error_no_results">Nothing found</string>
+    <string name="retry">retry</string>
+    <string name="dictionaries_error_searching">Searching...</string>
+    <string name="urban_dictionary_by">by</string>
+    <string name="description_image_icon">Icon</string>
+
+    <!--Settings-->
+    <string name="settings_search_settings">Search Settings</string>
+    <string name="settings_version">Version</string>
+    <string name="settings_version_string">%1$s (build %2$d)</string>
+    <string name="settings_website">visit</string>
+    <string name="settings_search_providers">Search Providers</string>
+    <string name="settings_num_of_images">Images</string>
+    <string name="settings_num_of_images_explain">Amount of images to show.</string>
+    <string name="settings_num_of_suggestions">How many suggestions to show?</string>
+    <string name="settings_diaog_choose_number">Choose a number:</string>
+    <string name="settings_suggestions_number">Number of suggestions to show</string>
+    <string name="settings_images_number">Number of images to show</string>
+    <string name="settings_images">Images</string>
+    <string name="settings_images_suggestions">Suggestions</string>
+    <string name="settings_local_server">Use local server</string>
+    <string name="settings_local_server_url">The local server URL</string>
+    <string name="settings_local_server_title">URL</string>
+    <string name="settings_search_providers_title">Modify search providers</string>
+    <string name="settings_search_providers_qwant">Qwant Images</string>
+    <string name="settings_search_providers_wikipedia">Wikipedia</string>
+    <string name="settings_search_providers_morfix">Morfix</string>
+    <string name="settings_search_providers_urban_dictionary">Urban Dictionary</string>
+    <string name="settings_about">About</string>
+    <string name="settings_about_view_source_code">View source code</string>
+    <string name="settings_about_site">https://github.com/eviabs/Dicts</string>
+
+    <!--Alerts-->
+    <string name="no_internet_connection">No internet</string>
+    <string name="dismiss">dismiss</string>
+    <string name="settings_bad_url">Bad URL</string>
+    <string name="back_twcie_to_exit">Press back again to exit</string>
+
+
+</resources>
