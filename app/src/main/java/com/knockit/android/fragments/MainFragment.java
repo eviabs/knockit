@@ -102,8 +102,6 @@ public class MainFragment extends Fragment implements RecyclerItemTouchHelper.Re
         ItemTouchHelper.SimpleCallback itemTouchHelperCallback = new RecyclerItemTouchHelper(0, ItemTouchHelper.LEFT, this);
         new ItemTouchHelper(itemTouchHelperCallback).attachToRecyclerView(recyclerViewMessages);
 
-        ((MainActivity) getActivity()).showFullScreenAlert(knockitMessages.get(0));
-
     }
 
     /**

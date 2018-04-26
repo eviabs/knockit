@@ -23,6 +23,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.knockit.android.App;
+import com.knockit.android.firebase.MyFirebaseMessagingService;
 import com.knockit.android.fragments.MainFragment;
 import com.knockit.android.fragments.SettingsFragment;
 import com.knockit.android.R;
@@ -36,8 +37,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private final MainFragment MainFragment = new MainFragment();
 
     private final SettingsFragment settingsFragment = new SettingsFragment();
-
-    private boolean firstLoad = true;
 
     private enum FragmentType {
         Main,
@@ -91,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onResume() {
         Log.d(TAG, "onResume()");
         App.activityResumed();
+        MyFirebaseMessagingService.activity = this;
         super.onResume();
 
     }
@@ -99,6 +99,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onPause() {
         Log.d(TAG, "onPause()");
         App.activityPaused();
+        MyFirebaseMessagingService.activity = null;
         super.onPause();
     }
 
@@ -134,7 +135,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             @Override
             public void run() {
-                doubleBackToExitPressedOnce=false;
+                doubleBackToExitPressedOnce = false;
             }
         }, doubleBackToExitPressedOnceDuration);
     }
@@ -220,24 +221,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     /**
-     * The default share functionality
-     */
-    public void share() {
-        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-        sharingIntent.setType("text/plain");
-        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, getString(R.string.share_app_subject));
-        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, getString(R.string.share_app_body));
-        startActivity(Intent.createChooser(sharingIntent, getString(R.string.share_via)));
-    }
-
-    /**
-     * The default send functionality
-     */
-    public void send() {
-        share();
-    }
-
-    /**
      * The default refresh functionality
      */
     public void refresh() {
@@ -282,28 +265,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     /**
      * Adds the 2 fragments to the fragments list.
      * If the fragments are already added, we remove them and add them again.
-     *
      */
-        public void setupFragments() {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.add(R.id.main_container, MainFragment);
-            fragmentTransaction.commit();
-        }
-
-    /**
-     * Crated a nice Snakbar the notifies the user that no internet connection is available.
-     */
-    public void notifyIfOffline() {
-        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        if (!(cm !=null && cm.getActiveNetworkInfo() != null && cm.getActiveNetworkInfo().isConnectedOrConnecting()))
-        {
-            showSnack(getResources().getString(R.string.no_internet_connection), Snackbar.LENGTH_INDEFINITE, getResources().getString(R.string.dismiss));
-        }
+    public void setupFragments() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.main_container, MainFragment);
+        fragmentTransaction.commit();
     }
 
     /**
      * Retrieve the LocalPreferences object.
+     *
      * @return the LocalPreferences object.
      */
     public LocalPreferences getLocalPreferences() {
@@ -311,18 +283,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void showFullScreenAlert(KnockitMessage knockitMessage) {
-        if (!firstLoad) {
-            if (knockitMessage != null) {
-                if (knockitMessage.getMessageType() == KnockitMessage.MESSAGE_TYPE_KNOKING) {
-                    this.showSnack("GO TO DOOR", Snackbar.LENGTH_SHORT, "EXIT");
-                }
+        if (knockitMessage != null) {
+            if (knockitMessage.getMessageType() == KnockitMessage.MESSAGE_TYPE_KNOKING) {
+                this.showSnack("GO TO DOOR", Snackbar.LENGTH_SHORT, "EXIT");
+            }
 
-                if (knockitMessage.getMessageType() == KnockitMessage.MESSAGE_TYPE_LOW_BATTERY) {
-                    this.showSnack("LOW BATTERY", Snackbar.LENGTH_SHORT, "EXIT");
-                }
+            if (knockitMessage.getMessageType() == KnockitMessage.MESSAGE_TYPE_LOW_BATTERY) {
+                this.showSnack("LOW BATTERY", Snackbar.LENGTH_SHORT, "EXIT");
             }
         }
 
-        firstLoad = false;
     }
 }

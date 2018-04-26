@@ -27,6 +27,7 @@ import org.json.JSONObject;
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     String NOTIFICATION_CHANNEL_ID = "my_channel_id_01";
+    public static MainActivity activity;
 
     public MyFirebaseMessagingService() {
     }
@@ -42,6 +43,11 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
         if (!App.isActivityVisible()) {
             sendNotification(knockitMessage);
+        } else {
+            if (activity != null) {
+                activity.showFullScreenAlert(knockitMessage);
+            }
+
         }
     }
 
