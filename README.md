@@ -9,7 +9,7 @@ An easy-to-install device that desinged to help hearing-impaired people who cann
 ## Demo
 <img src="https://user-images.githubusercontent.com/14614396/40270926-6ae9afc2-5b9e-11e8-9b01-4da24921c70b.gif" width="100%" height="100%" />
 
-*demo with the the first prototype during the HUJI Hackathon 2018 contest*
+*demo with the first prototype during the HUJI Hackathon 2018 contest*
 
 ## Prizes
 *kockit* is the **1st place winner** of [HUJI Hackathon](https://www.hujihackathon.co.il/) 2018.
