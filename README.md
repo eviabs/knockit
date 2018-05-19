@@ -21,7 +21,7 @@ Both the device and the application were built during the 24-hour contest of HUJ
 - [Alex Goft](https://github.com/alexgoft) - Developer
 - [Evyatar Ben-Shitrit](https://github.com/eviabs) - Developer
 - Michael Steshenko - Developer
-- ShelleyTsipkin - Designer 
+- Shelley Tsipkin - Designer 
 
 ## About This Repo
 The repo contains only the app used to *demonstrate* the device capabilities. The Arduino code and the designed assents are not shared.
