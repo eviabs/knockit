@@ -12,9 +12,15 @@ An easy-to-install device that is desinged to help hearing-impaired people who c
 *demo with the first prototype during the HUJI Hackathon 2018 contest*
 
 ## Prizes
-*kockit* is the **First-Place Winner** of [HUJI Hackathon](https://www.hujihackathon.co.il/) 2018.
 
-Both the device and the application were built during the 24-hour contest of HUJI Hackathon 2018.
+| <img src="https://static.wixstatic.com/media/c0f168_d2a20d71da324dc08ae55727a9259fdc~mv2.png/v1/fill/w_179,h_241,al_c,usm_0.66_1.00_0.01/c0f168_d2a20d71da324dc08ae55727a9259fdc~mv2.png" width="50%" height="50%" />  | *kockit* is the **First-Place Winner** of [HUJI Hackathon](https://www.hujihackathon.co.il/) 2018. <br> Both the device and the application were built during this <br>24-hour contest.|
+| ------------- | ------------- |
+
+<img src="https://media.licdn.com/media-proxy/ext?w=800&h=800&f=n&hash=SRGVUe2JN5Wgfe5XPieGr%2Fr%2Fx7Y%3D&ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta5g-0R6jnhodx1Ey9KGTqAGj6E5DQJHUA3L0CHH05IbfPWi9KMeMLOehpUATeiRQjQAyLOy1ETKwEI66eonoeN5x2MOwJJD5agYUbhl4j3lK6w" width="70%" height="70%" />
+
+*From right to left: Alex, Yoav, Me (Evyatar), Shelly, Michael.*
+
+*The prize was donated to http://www.shema.org.il/*
 
 ## Team Members
 - Yoad Abadi - Developer 
