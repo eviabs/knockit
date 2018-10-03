@@ -4,7 +4,7 @@ An easy-to-install device that is desinged to help hearing-impaired people who c
 
 
 ## About The Device
-*knockit* is an Arduino based device equipped with a vibration sensor that senses when the door is knocked. After processing the sensor's signals, the device decides whether to send notification to its attached clients using Wi-Fi connection.
+*knockit* is an Arduino based device equipped with a vibration sensor that senses when the door is knocked. After processing the sensor's signals, the device decides whether to send a notification to its paired clients using Wi-Fi connection.
 
 ## Demo
 <img src="https://user-images.githubusercontent.com/14614396/40270926-6ae9afc2-5b9e-11e8-9b01-4da24921c70b.gif" width="100%" height="100%" />
