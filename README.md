@@ -9,7 +9,7 @@ An easy-to-install device that is desinged to help hearing-impaired people who c
 ## Demo
 <img src="https://user-images.githubusercontent.com/14614396/40270926-6ae9afc2-5b9e-11e8-9b01-4da24921c70b.gif" width="100%" height="100%" />
 
-*demo with the first prototype during the HUJI Hackathon 2018 contest*
+*Demo with the first prototype during the HUJI Hackathon 2018 contest*
 
 ## Prizes
 
@@ -23,7 +23,7 @@ An easy-to-install device that is desinged to help hearing-impaired people who c
 *The prize was donated to http://www.shema.org.il/*
 
 ## Team Members
-- Yoad Abadi - Developer 
+- [Yoad Abadi](https://github.com/yoavabadi) - Developer 
 - [Alex Goft](https://github.com/alexgoft) - Developer
 - [Evyatar Ben-Shitrit](https://github.com/eviabs) - Developer
 - Michael Steshenko - Developer
