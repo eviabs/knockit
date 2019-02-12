@@ -1,3 +1,6 @@
+[![Analytics](https://ga-beacon.appspot.com/UA-121798497-2/github/eviabs/knockit)](https://github.com/igrigorik/ga-beacon)
+[![Is this project still maintained?](https://img.shields.io/badge/maintained%3F-no-red.svg?style=plastic)](https://github.com/badges/shields)
+
 # knockit
 An easy-to-install device that is desinged to help hearing-impaired people who cannot always know when someone's at the door. The device instantly notifies the user when the door is knocked.
 ![mockup2 custom](https://user-images.githubusercontent.com/14614396/40270969-57f89698-5b9f-11e8-87a2-a555b18874c8.jpg)
